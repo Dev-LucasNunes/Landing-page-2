@@ -2,9 +2,93 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 
 html, body{
 	height: 100%;
-	background-color: black;
+	
+}
+
+/*divs guias gerais*/
+.container{
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+
+}
+
+header{
+	background-image: url("../imagens/capa.png");
+	width: 100%;
+	height: 90vh;
+	padding: 40px 2%;
+	max-height: 700px;
+	background-size: cover;
+	background-position: center;
+}
+
+
+.header-container{
+	width: 100%;
+	height: 90vh;
+	padding: 5px;
+	margin: 5px;
+	display: grid;
+	grid-template-columns: 160px auto auto;
+	grid-template-rows: 72px auto auto;
+	grid-template-areas:
+	"logo . li"
+	". . chamada1"
+	". . ." ;
+}
+
+.logo{
+	background-image: url("../imagens/logo1.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 5px;
+	padding: 5px;
+	width: auto;
+	height: auto;
+	grid-area: logo;
+}
+
+
+
+
+header, nav, ul, li{
+	display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+	margin: 5px;
+	padding: 5px;
+	grid-area: li;
+}
+
+header nav ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+.header-container article.chamada1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	grid-area: chamada1;
+}
+
+article.chamada1 h2{
+	margin-top: 20px;
+	font-size: 40px;
+	color: white;
+}
+
+article.chamada1 p{
+	align-self: flex-end;
+	font-size: 15px;
+	color: white;
+	max-width: 600px;
 }
