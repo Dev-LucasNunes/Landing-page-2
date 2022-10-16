@@ -15,6 +15,7 @@ html, body{
 	max-width: 1024px;
 	margin: 0 auto;
 }
+/*cabeçalho*/
 header{
 	background-image: url("../imagens/banner13.bmp");
 	width: 100%;
@@ -134,7 +135,6 @@ section.sessao1{
 	padding: 20px 2%;
 	height: 350px;
 	display: flex;
-
 }
 .grid{
 display: flex;
@@ -198,17 +198,182 @@ background-color: #f85e26;
 	right: 80px;
 }
 
+/*inicio da parte inferior*/
+.sessao2{
+	padding-top:30px 2%;
+	background-color: white;
+	text-align: center;
+	margin-top: 20px;
+}
+.inferior-flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.sessao2 h2{
+	color: #472663;
+	font-weight: 300;
+}
+.sessao2 p{
+	margin-top: 20px;
+	max-width: 600px;
+}
+.sessao2 img{
+	width: 100%;
+	height: 65vh;
+	max-width: 800px;
+	padding: 0 2%;
+	position: relative;
+	top: 20px;
+	z-index: 2;
+}
+/*sessao3*/
+section.sessao3{
+	display: flex;
+	height: 40vh;
+}
+.parte1{
+	width: 50%;
+	height: 65vh;
+	background-color: #835FA7;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 80px 0 90px 0;
+	position: relative;
+	bottom: 140px;
+	z-index: 1;
+}
+.parte1 h2{
+	align-self: center;
+	font-weight: 300;
+	margin-right: 145px;
+	color: white;
+	margin-top: 110px;
+}
+.parte1 p{
+	max-width: 70%;
+	color: white;
+	line-height: 40px;
+}
+.parte2{
+	width: 50%;
+	height: 65vh;
+	position: relative;
+	bottom: 140px;
+}
+.sobre{
+	max-width: 70%;
+	margin-top: 197px;
+	line-height: 30px;
+	max-height: 29vh;
+}
+.titulo{
+	margin-left: 10px;
+	display: grid;
+	grid-template-areas:
+	"nome imagem"
+	"funcao  imagem";
+}
+.titulo h2{
+	color: #232323;
+	font-weight: 400;
+	grid-area: nome;
+}
+.titulo > p{
+	font-style: italic;
+	font-size: 14px;
+	color: #232323;
+	text-decoration: underline;
+	grid-area: funcao;
+}
+.titulo .imagem{
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	grid-area: imagem;
+	background-color: blue;
+}
+.texto p{
+	color: #232323;
+	position: relative;
+	bottom: 10px;
+	line-height: 40px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.slide-bullets{
+	display: flex;
+	margin-left: 12px;
+	margin-bottom: 10px;
+}
+.slide-bullets > div{
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: #ccc;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.slide-bullets > div:first-child{
+	background-color: black;
+}
+
+
+
+
 /*Responsivo*/
+
+@media screen and (max-width: 1024px){
+	.parte1 p{
+		max-width: 70%;
+		color: white;
+		line-height: 30px;
+	}
+	.texto p{
+		color: #232323;
+		position: relative;
+		bottom: 10px;
+		line-height: 30px;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+}
 
 @media screen and (max-width: 900px){
 	.device{
 		display: none;
+	}
+	.grid{
+		justify-content: center;
 	}
 	.texto-sessao1{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		position: static;
+	}
+	.sessao2 img{
+		width: 100%;
+		max-width: 650px;
+		height: 55vh;
+	}
+	.parte1 h2{
+		margin-right: 50px;
+	}
+	.parte1 p{
+		margin-top: 10px;
+		color: white;
+		line-height: 25px;
+	}
+	.texto p{
+		color: #232323;
+		line-height: 25px;
+		margin-left: 10px;
+		margin-top: 10px;
+		margin-bottom: 2px;
 	}
 }
 @media screen and (max-width: 768px){
@@ -217,11 +382,181 @@ background-color: #f85e26;
 		max-width: 768px;
 		margin: 0 auto;
 	}
-
 	.mobile-menu{
 		display: flex;
 	}
 	.desktop-menu{
 		display: none;
+	}
+	article.chamada1 > h2{
+		font-size: 35px;
+	}
+	article.chamada1 > p{
+		font-size: 14px;
+		margin-left: 65px;
+		margin-top: 5px;
+	}
+	.sessao2 img{
+		width: 100%;
+		max-width: 600px;
+		height: 48vh;
+	}
+}
+@media screen and (max-width: 425px){
+	.desktop-menu{
+		display: none;
+	}
+	.container{
+		width: 100%;
+		max-width: 425px;
+	}
+	.mobile-menu{
+		display: block;
+		background-size: 100% 100%;
+		display: flex;
+	}
+	.menu-hamburguer{
+		width: 32px;
+		height: 32px;
+		background-size: 100% 100%;
+		background-image: url(../imagens/menu.png);
+		cursor: pointer;
+		position: static;
+		margin-left: 180px;
+	}
+	.header-container{
+		width: 100%;
+		height: 90vh;
+		display: grid;
+		grid-template-columns: 160px auto auto;
+		grid-template-rows: 72px auto auto;
+		grid-template-areas:
+		"logo . li"
+		"chamada1 chamada1 ."
+	}
+	.header-container article.chamada1{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		grid-area: chamada1;
+	}
+	article.chamada1 h2{
+		width: 400px;
+		text-align: center;
+		margin-top: 20px;
+		font-size: 25px;
+		color: white;
+
+	}
+	article.chamada1 p{
+		align-self: center;
+		margin-right: 30px;
+		font-size: 14px;
+		color: white;
+	}
+	.texto-sessao1{
+		width: 100%;
+		height: calc(100% - 20px);
+		position: static;
+	}
+	.texto-sessao1 h2{
+		font-size: 20px;
+		font-weight: normal;
+		color: white;
+		text-align: justify;
+	}
+	.texto-sessao1 p{
+		font-size: 14px;
+		color: white;
+		text-align: justify;
+	}
+	.sessao2 h2{
+		color: #472663;
+		font-weight: 300;
+		font-size: 22px;
+	}
+	.sessao2 p{
+		max-width: 525px;
+		font-size: 18px;
+	}
+	.sessao2 img{
+		width: 100%;
+		height: 25vh;
+		margin-top: 10px;
+		max-width: 350px;
+		padding: 0 2%;
+		position: static;
+		z-index: 2;
+	}
+	.parte1{
+		width: 50%;
+		height: 60vh;
+	}
+	.parte1 h2{
+		align-self: flex-start;
+		width: 100%;
+		font-size: 20px;
+		font-weight: 300;
+		margin-right: 145px;
+		color: white;
+		margin-top: 110px;
+		margin-left: 5px;
+	}
+	.parte1 p{
+		line-height: 20px;
+		margin-left: 5px;
+		align-self: flex-start;
+		font-size: 15px;
+		max-width: 100%;
+		width: 100%;
+		color: white;
+	}
+	.parte2{
+		width: 50%;
+		height: 60vh;
+	}
+	.sobre{
+		max-width: 100%;
+		margin-top: 197px;
+		line-height: 20px;
+		max-height: 29vh;
+	}
+	.titulo{
+		margin-left: 10px;
+		display: grid;
+		grid-template-areas:
+		"nome imagem"
+		"funcao  imagem";
+	}
+	.titulo h2{
+		font-size: 20px;
+		color: #232323;
+		font-weight: 400;
+		grid-area: nome;
+	}
+	.titulo > p{
+		font-style: italic;
+		font-size: 12px;
+		color: #232323;
+		text-decoration: underline;
+		grid-area: funcao;
+	}
+	.titulo .imagem{
+		width: 35px;
+		height: 35px;
+		border-radius: 50px;
+		margin-top: 2px;
+		grid-area: imagem;
+		background-color: blue;
+	}
+	.texto p{
+		font-size: 15px;
+		color: #232323;
+		position: relative;
+		bottom: 10px;
+		line-height: 20px;
+		margin-left: 10px;
+		margin-top: 10px;
 	}
 }
