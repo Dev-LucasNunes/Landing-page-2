@@ -171,20 +171,20 @@ display: flex;
 	max-width:460px;
 }
 .btn1{
-background-color: #FF703D;
-width: 165px;
-height: 44px;
-color: white;
-margin-top: 10px;
-margin-left: 10px;
-line-height: 44px;
-text-align: center;
-border-radius: 15px;
-cursor: pointer;
-border-bottom:5px solid #Fa8950;
+	background-color: #FF703D;
+	width: 165px;
+	height: 44px;
+	color: white;
+	margin-top: 10px;
+	margin-left: 10px;
+	line-height: 44px;
+	text-align: center;
+	border-radius: 15px;
+	cursor: pointer;
+	border-bottom:5px solid #Fa8950;
 }
 .btn1:hover{
-background-color: #f85e26;
+	background-color: #f85e26;
 }
 .device{
 	background-image: url(../imagens/device.png);
@@ -320,243 +320,91 @@ section.sessao3{
 	background-color: black;
 }
 
+/*sessao4*/
 
+section.sessao4{
+	background-color: #472663;
+	padding: 100px 0;
+	margin-top: 16px;
 
-
-/*Responsivo*/
-
-@media screen and (max-width: 1024px){
-	.parte1 p{
-		max-width: 70%;
-		color: white;
-		line-height: 30px;
-	}
-	.texto p{
-		color: #232323;
-		position: relative;
-		bottom: 10px;
-		line-height: 30px;
-		margin-left: 10px;
-		margin-top: 10px;
-	}
+}
+.container4{
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+.form h2{
+	font-size: 23px;
+	font-weight: 300;
+	margin-left: 10px;
+	padding-left: 10px;
+}
+.form p{
+	padding-left: 10px;
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: 300;
+	max-width: 400px;
+}
+.form form{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding-left: 10px;
+}
+.form form input[type=text]{
+	width: 100%;
+	max-width: 420px;
+	margin-top: 5px;
+	height: 45px;
+	padding-left: 8px;
+	line-height: 58px;
+	border: 1px solid rgb(200, 200, 200);
+}
+.form form textarea{
+	width: 100%;
+	max-width: 420px;
+	margin-top: 5px;
+	padding: 15px;
+	border: 1px solid rgb(200, 200, 200);
+	height: 130px;
+}
+.form form input[type=submit]{
+	background-color: #FF703D;
+	width: 165px;
+	height: 44px;
+	color: white;
+	margin-top: 15px;
+	border-radius: 15px;
+	cursor: pointer;
+	border: none;
+	border-bottom: 5px solid  #Fa8950;
+}
+.map-wraper{
+	color: white;
+	padding-right: 10px;
+}
+.map-wraper h2{
+	font-size: 23px;
+	font-weight: 300;
+}
+.map{
+	width: 100%;
+	max-width: 420px;
+	height: 420px;
+	background-color: white;
+	border: 5px solid rgb(200, 200, 200);
 }
 
-@media screen and (max-width: 900px){
-	.device{
-		display: none;
-	}
-	.grid{
-		justify-content: center;
-	}
-	.texto-sessao1{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		position: static;
-	}
-	.sessao2 img{
-		width: 100%;
-		max-width: 650px;
-		height: 55vh;
-	}
-	.parte1 h2{
-		margin-right: 50px;
-	}
-	.parte1 p{
-		margin-top: 10px;
-		color: white;
-		line-height: 25px;
-	}
-	.texto p{
-		color: #232323;
-		line-height: 25px;
-		margin-left: 10px;
-		margin-top: 10px;
-		margin-bottom: 2px;
-	}
-}
-@media screen and (max-width: 768px){
-	.container{
-		width: 100%;
-		max-width: 768px;
-		margin: 0 auto;
-	}
-	.mobile-menu{
-		display: flex;
-	}
-	.desktop-menu{
-		display: none;
-	}
-	article.chamada1 > h2{
-		font-size: 35px;
-	}
-	article.chamada1 > p{
-		font-size: 14px;
-		margin-left: 65px;
-		margin-top: 5px;
-	}
-	.sessao2 img{
-		width: 100%;
-		max-width: 600px;
-		height: 48vh;
-	}
-}
-@media screen and (max-width: 425px){
-	.desktop-menu{
-		display: none;
-	}
-	.container{
-		width: 100%;
-		max-width: 425px;
-	}
-	.mobile-menu{
-		display: block;
-		background-size: 100% 100%;
-		display: flex;
-	}
-	.menu-hamburguer{
-		width: 32px;
-		height: 32px;
-		background-size: 100% 100%;
-		background-image: url(../imagens/menu.png);
-		cursor: pointer;
-		position: static;
-		margin-left: 180px;
-	}
-	.header-container{
-		width: 100%;
-		height: 90vh;
-		display: grid;
-		grid-template-columns: 160px auto auto;
-		grid-template-rows: 72px auto auto;
-		grid-template-areas:
-		"logo . li"
-		"chamada1 chamada1 ."
-	}
-	.header-container article.chamada1{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		grid-area: chamada1;
-	}
-	article.chamada1 h2{
-		width: 400px;
-		text-align: center;
-		margin-top: 20px;
-		font-size: 25px;
-		color: white;
 
-	}
-	article.chamada1 p{
-		align-self: center;
-		margin-right: 30px;
-		font-size: 14px;
-		color: white;
-	}
-	.texto-sessao1{
-		width: 100%;
-		height: calc(100% - 20px);
-		position: static;
-	}
-	.texto-sessao1 h2{
-		font-size: 20px;
-		font-weight: normal;
-		color: white;
-		text-align: justify;
-	}
-	.texto-sessao1 p{
-		font-size: 14px;
-		color: white;
-		text-align: justify;
-	}
-	.sessao2 h2{
-		color: #472663;
-		font-weight: 300;
-		font-size: 22px;
-	}
-	.sessao2 p{
-		max-width: 525px;
-		font-size: 18px;
-	}
-	.sessao2 img{
-		width: 100%;
-		height: 25vh;
-		margin-top: 10px;
-		max-width: 350px;
-		padding: 0 2%;
-		position: static;
-		z-index: 2;
-	}
-	.parte1{
-		width: 50%;
-		height: 60vh;
-	}
-	.parte1 h2{
-		align-self: flex-start;
-		width: 100%;
-		font-size: 20px;
-		font-weight: 300;
-		margin-right: 145px;
-		color: white;
-		margin-top: 110px;
-		margin-left: 5px;
-	}
-	.parte1 p{
-		line-height: 20px;
-		margin-left: 5px;
-		align-self: flex-start;
-		font-size: 15px;
-		max-width: 100%;
-		width: 100%;
-		color: white;
-	}
-	.parte2{
-		width: 50%;
-		height: 60vh;
-	}
-	.sobre{
-		max-width: 100%;
-		margin-top: 197px;
-		line-height: 20px;
-		max-height: 29vh;
-	}
-	.titulo{
-		margin-left: 10px;
-		display: grid;
-		grid-template-areas:
-		"nome imagem"
-		"funcao  imagem";
-	}
-	.titulo h2{
-		font-size: 20px;
-		color: #232323;
-		font-weight: 400;
-		grid-area: nome;
-	}
-	.titulo > p{
-		font-style: italic;
-		font-size: 12px;
-		color: #232323;
-		text-decoration: underline;
-		grid-area: funcao;
-	}
-	.titulo .imagem{
-		width: 35px;
-		height: 35px;
-		border-radius: 50px;
-		margin-top: 2px;
-		grid-area: imagem;
-		background-color: blue;
-	}
-	.texto p{
-		font-size: 15px;
-		color: #232323;
-		position: relative;
-		bottom: 10px;
-		line-height: 20px;
-		margin-left: 10px;
-		margin-top: 10px;
-	}
-}
+
+
+
+
+
