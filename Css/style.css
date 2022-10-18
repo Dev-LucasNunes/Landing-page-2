@@ -199,133 +199,128 @@ display: flex;
 }
 
 /*inicio da parte inferior*/
+/*sessao2*/
 .sessao2{
-	padding-top:30px 2%;
-	background-color: white;
-	text-align: center;
-	margin-top: 20px;
-}
-.inferior-flex{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-.sessao2 h2{
-	color: #472663;
-	font-weight: 300;
-}
-.sessao2 p{
-	margin-top: 20px;
-	max-width: 600px;
-}
-.sessao2 img{
+	background-color: #503864;
 	width: 100%;
-	height: 65vh;
-	max-width: 800px;
-	padding: 0 2%;
-	position: relative;
-	top: 20px;
-	z-index: 2;
-}
-/*sessao3*/
-section.sessao3{
-	display: flex;
-	height: 40vh;
-}
-.parte1{
-	width: 50%;
-	height: 65vh;
-	background-color: #835FA7;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	padding: 80px 0 90px 0;
-	position: relative;
-	bottom: 140px;
-	z-index: 1;
-}
-.parte1 h2{
-	align-self: center;
-	font-weight: 300;
-	margin-right: 145px;
-	color: white;
-	margin-top: 110px;
-}
-.parte1 p{
-	max-width: 70%;
-	color: white;
-	line-height: 40px;
-}
-.parte2{
-	width: 50%;
-	height: 65vh;
-	position: relative;
-	bottom: 140px;
-}
-.sobre{
-	max-width: 70%;
-	margin-top: 197px;
-	line-height: 30px;
-	max-height: 29vh;
-}
-.titulo{
-	margin-left: 10px;
+	height: 100%;
 	display: grid;
 	grid-template-areas:
-	"nome imagem"
-	"funcao  imagem";
+	"sup sup sup"
+	"aside1 centro aside2"
+	"inf inf inf";
+	grid-template-rows: 35% 60% 35%;
+    grid-template-columns: auto 60% auto;
 }
-.titulo h2{
-	color: #232323;
-	font-weight: 400;
-	grid-area: nome;
+.grid-superior{
+	grid-area: sup;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.titulo > p{
-	font-style: italic;
-	font-size: 14px;
-	color: #232323;
-	text-decoration: underline;
-	grid-area: funcao;
+.grid-superior h2{
+	margin-bottom: 10px;
+	font-size: 25px;
 }
-.titulo .imagem{
-	width: 40px;
-	height: 40px;
-	border-radius: 50px;
-	grid-area: imagem;
-	background-color: blue;
+.grid-superior p{
+	max-width: 70%;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 30px;
 }
-.texto p{
-	color: #232323;
-	position: relative;
-	bottom: 10px;
-	line-height: 40px;
-	margin-left: 10px;
-	margin-top: 10px;
+.aside1{
+	grid-area: aside1;
+	background: linear-gradient( white 50%, #503864 50%)
+}
+.imagem-centro{
+	width: 100%;
+	grid-area: centro;
+	background-image: url(../imagens/banner1.jpg);
+	background-position: center;
+	background-size: cover;
+	border: 1px solid black
+}
+.aside2{
+	grid-area: aside2;
+	background-color: white;
+}
+.grid-inferior{
+	grid-area: inf;
+	background: linear-gradient(to right, #503864 50%, white 50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.grid-inferior .texto-esquerdo{
+	width: 50vw;
+	max-width: 35%;
+	margin-right: 30px;
+	margin-bottom: 35px;
+}
+.grid-inferior .texto-esquerdo h2{
+	font-weight: 300;
+}
+.grid-inferior .texto-esquerdo p{
+	line-height: 30px;
+}
+.grid-inferior .texto-direito{
+	width: 50vw;
+	display: grid;
+	grid-template-areas:
+	"titulo perfil"
+	"subtitulo perfil"
+	"texto texto"
+	"bullets .";
+	max-width: 35%;
+}
+.grid-inferior .texto-direito h2{
+	font-weight: 300;
+	grid-area: titulo;
+	display: flex;
+	align-items: flex-end;
+}
+.grid-inferior .texto-direito .subtitulo{
+	grid-area: subtitulo;
+}
+.grid-inferior .texto-direito p{
+	line-height: 25px;
+	grid-area: texto;
 }
 .slide-bullets{
 	display: flex;
-	margin-left: 12px;
-	margin-bottom: 10px;
+	grid-area: bullets;
 }
-.slide-bullets > div{
-	width: 16px;
+.slide-bullets div{
 	height: 16px;
-	border-radius: 8px;
-	background-color: #ccc;
-	margin-right: 5px;
-	cursor: pointer;
+	width: 16px;
+	margin: 10px 2px 0 2px;
+	background-color: gray;
+	border-radius: 50%;
 }
-.slide-bullets > div:first-child{
+.slide-bullets div:first-child{
 	background-color: black;
 }
+.imagem-perfil{
+	width: 10vh;
+	height: 10vh;
+	grid-area: perfil;
+	background-image: url(../imagens/perfil.jpg);
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	margin-right: 100px;
+}
 
-/*sessao4*/
+
+/*sessao4
 
 section.sessao4{
+	width: 100%;
+	height: 100%;
 	background-color: #472663;
 	padding: 100px 0;
-	margin-top: 16px;
 
 }
 .container4{
