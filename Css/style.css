@@ -201,7 +201,6 @@ display: flex;
 /*inicio da parte inferior*/
 /*sessao2*/
 .sessao2{
-	background-color: #503864;
 	width: 100%;
 	height: 100%;
 	display: grid;
@@ -209,12 +208,12 @@ display: flex;
 	"sup sup sup"
 	"aside1 centro aside2"
 	"inf inf inf";
-	grid-template-rows: 35% 60% 35%;
+	grid-template-rows: 30% 60% 30%;
     grid-template-columns: auto 60% auto;
 }
 .grid-superior{
+	width: calc(97% - 5px);
 	grid-area: sup;
-	background-color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -223,6 +222,7 @@ display: flex;
 .grid-superior h2{
 	margin-bottom: 10px;
 	font-size: 25px;
+	color: #503864;
 }
 .grid-superior p{
 	max-width: 70%;
@@ -232,10 +232,11 @@ display: flex;
 }
 .aside1{
 	grid-area: aside1;
-	background: linear-gradient( white 50%, #503864 50%)
+	background: linear-gradient( white 50%, #83609c 50%)
 }
 .imagem-centro{
 	width: 100%;
+	height: 100%;
 	grid-area: centro;
 	background-image: url(../imagens/banner1.jpg);
 	background-position: center;
@@ -243,12 +244,13 @@ display: flex;
 	border: 1px solid black
 }
 .aside2{
+	width: 84%;
 	grid-area: aside2;
-	background-color: white;
 }
 .grid-inferior{
+	width: calc(97% - 5px);
 	grid-area: inf;
-	background: linear-gradient(to right, #503864 50%, white 50%);
+	background: linear-gradient(to right, #83609c 50%, white 50%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -295,7 +297,7 @@ display: flex;
 .slide-bullets div{
 	height: 16px;
 	width: 16px;
-	margin: 10px 2px 0 2px;
+	margin: 5px 2px 0 2px;
 	background-color: gray;
 	border-radius: 50%;
 }
@@ -303,8 +305,9 @@ display: flex;
 	background-color: black;
 }
 .imagem-perfil{
-	width: 10vh;
-	height: 10vh;
+	width: 9vh;
+	height: 9vh;
+	margin-top: 5px;
 	grid-area: perfil;
 	background-image: url(../imagens/perfil.jpg);
 	background-position: center;
@@ -313,89 +316,100 @@ display: flex;
 	margin-right: 100px;
 }
 
-
-/*sessao4
-
-section.sessao4{
-	width: 100%;
-	height: 100%;
-	background-color: #472663;
+/*sessao3*/
+.sessao3{
+	background-color: #503864;
+}
+.ultima-parte{
 	padding: 100px 0;
-
-}
-.container4{
-	display: grid;
-	grid-template-columns: auto auto;
-}
-.form{
+	margin-top: 125px;
+	background-color: #503864 ;
 	width: 100%;
+	height: 100vh;
 	display: flex;
-	flex-direction: column;
-	color: white;
 }
-.form h2{
+.parte1{
+	width: 50%;
+	margin-left: 10px;
+}
+.parte1 h2{
 	font-size: 23px;
 	font-weight: 300;
-	margin-left: 10px;
-	padding-left: 10px;
 }
-.form p{
-	padding-left: 10px;
-	margin-left: 10px;
+.parte1 p{
 	font-size: 15px;
 	font-weight: 300;
 	max-width: 400px;
 }
-.form form{
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	margin: 10px;
-	padding-left: 10px;
+.parte1 form input[type=text]{
+width: 100%;
+max-width: 480px;
+font-size: 15px;
+height: 58px;
+padding-left: 8px;
+line-height: 58px;
+border: 1px solid rgb(200, 200, 200);
+margin-top: 5px;
 }
-.form form input[type=text]{
-	width: 100%;
-	max-width: 420px;
+.parte1 form textarea{
+	font-size: 15px;
+	padding-left: 5px;
 	margin-top: 5px;
-	height: 45px;
-	padding-left: 8px;
-	line-height: 58px;
-	border: 1px solid rgb(200, 200, 200);
-}
-.form form textarea{
-	width: 100%;
-	max-width: 420px;
-	margin-top: 5px;
-	padding: 15px;
-	border: 1px solid rgb(200, 200, 200);
 	height: 130px;
+	line-height: 130px;
+	width: 100%;
+	max-width: 480px;
+	border: 1px solid rgb(200, 200, 200);
 }
-.form form input[type=submit]{
+.parte1 input[type=submit]{
 	background-color: #FF703D;
 	width: 165px;
 	height: 44px;
 	color: white;
-	margin-top: 15px;
+	margin-top: 10px;
+	line-height: 44px;
+	text-align: center;
 	border-radius: 15px;
 	cursor: pointer;
 	border: none;
-	border-bottom: 5px solid  #Fa8950;
+	border-bottom:5px solid #Fa8950;
 }
-.map-wraper{
-	color: white;
-	padding-right: 10px;
+.parte1 input[type=submit]:hover{
+	background-color: #f85e26;
 }
-.map-wraper h2{
+.parte2{
+	width: 50%;
+}
+.parte2 h2{
 	font-size: 23px;
 	font-weight: 300;
 }
-.map{
+.parte2 .map{
+	margin-top: 10px;
 	width: 100%;
-	max-width: 420px;
-	height: 420px;
+	height: 100%;
+	max-width: 450px;
+	max-height: 450px;
+	border: 1px solid rgb(200, 200, 200);
 	background-color: white;
-	border: 5px solid rgb(200, 200, 200);
 }
+
+footer{
+	padding: 40px 0;
+	background: #192123;
+}
+.rodape{
+	display: flex;
+	justify-content: space-between;
+}
+.rodape p{
+	color: white;
+	font-size: 14px;
+}
+
+
+
+
 
 
 
